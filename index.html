@@ -1,0 +1,1768 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ネガティヴ・ケイパビリティ：利用者が獲得すべき核心的スキル | KBC スタッフ教育資料</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+            line-height: 1.8;
+            color: #2d3748;
+            background: linear-gradient(135deg, #f7fafc 0%, #e6f2f5 100%);
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* ヘッダー */
+        header {
+            background: linear-gradient(135deg, #1a365d 0%, #2c5282 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="0.5"/><circle cx="50" cy="50" r="30" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="0.5"/><circle cx="50" cy="50" r="20" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="0.5"/></svg>');
+            background-size: 300px;
+            opacity: 0.3;
+        }
+
+        header h1 {
+            font-size: 2.2em;
+            margin-bottom: 15px;
+            font-weight: 700;
+            position: relative;
+            z-index: 1;
+        }
+
+        header .subtitle {
+            font-size: 1.2em;
+            opacity: 0.9;
+            font-weight: 300;
+            position: relative;
+            z-index: 1;
+        }
+
+        header .tagline {
+            margin-top: 20px;
+            font-size: 1em;
+            opacity: 0.85;
+            font-style: italic;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* セクション共通 */
+        section {
+            background: white;
+            margin: 40px auto;
+            padding: 50px 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+
+        section h2 {
+            font-size: 2em;
+            color: #1a365d;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #38b2ac;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        section h3 {
+            font-size: 1.5em;
+            color: #2c5282;
+            margin: 35px 0 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        section h4 {
+            font-size: 1.2em;
+            color: #2d3748;
+            margin: 25px 0 15px;
+            font-weight: 600;
+        }
+
+        p {
+            margin-bottom: 20px;
+            line-height: 1.9;
+        }
+
+        /* アイコン */
+        .section-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #38b2ac 0%, #319795 100%);
+            color: white;
+            border-radius: 12px;
+            font-size: 1.3em;
+        }
+
+        .sub-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 35px;
+            height: 35px;
+            background: linear-gradient(135deg, #ed8936 0%, #dd6b20 100%);
+            color: white;
+            border-radius: 8px;
+            font-size: 1em;
+        }
+
+        /* カード */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+
+        .card {
+            background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+            padding: 25px;
+            border-radius: 10px;
+            border-left: 4px solid #38b2ac;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(56, 178, 172, 0.15);
+        }
+
+        .card h4 {
+            color: #2c5282;
+            margin: 0 0 15px 0;
+            font-size: 1.1em;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .card-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 30px;
+            height: 30px;
+            background: #38b2ac;
+            color: white;
+            border-radius: 6px;
+            font-size: 0.9em;
+        }
+
+        .card p {
+            margin: 0;
+            font-size: 0.95em;
+            line-height: 1.7;
+        }
+
+        /* ハイライトボックス */
+        .highlight-box {
+            background: linear-gradient(135deg, #fff5f5 0%, #fed7d7 100%);
+            border-left: 5px solid #fc8181;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+
+        .highlight-box.warning {
+            background: linear-gradient(135deg, #fffaf0 0%, #feebc8 100%);
+            border-left-color: #ed8936;
+        }
+
+        .highlight-box.info {
+            background: linear-gradient(135deg, #ebf8ff 0%, #bee3f8 100%);
+            border-left-color: #4299e1;
+        }
+
+        .highlight-box.success {
+            background: linear-gradient(135deg, #f0fff4 0%, #c6f6d5 100%);
+            border-left-color: #48bb78;
+        }
+
+        .highlight-box h4 {
+            margin-top: 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* リスト */
+        ul, ol {
+            margin: 20px 0 20px 30px;
+        }
+
+        li {
+            margin-bottom: 12px;
+            line-height: 1.8;
+        }
+
+        li strong {
+            color: #2c5282;
+        }
+
+        /* フローチャート */
+        .flow-container {
+            margin: 40px 0;
+            padding: 30px;
+            background: #f7fafc;
+            border-radius: 10px;
+        }
+
+        .flow-step {
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
+            gap: 20px;
+        }
+
+        .flow-number {
+            flex-shrink: 0;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #2c5282 0%, #1a365d 100%);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3em;
+            font-weight: bold;
+        }
+
+        .flow-content {
+            flex: 1;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .flow-arrow {
+            text-align: center;
+            color: #38b2ac;
+            font-size: 1.5em;
+            margin: 10px 0;
+        }
+
+        /* アコーディオン */
+        .accordion {
+            margin: 30px 0;
+        }
+
+        .accordion-item {
+            margin-bottom: 15px;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .accordion-header {
+            background: linear-gradient(135deg, #edf2f7 0%, #e2e8f0 100%);
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.3s ease;
+        }
+
+        .accordion-header:hover {
+            background: linear-gradient(135deg, #e2e8f0 0%, #cbd5e0 100%);
+        }
+
+        .accordion-header h4 {
+            margin: 0;
+            font-size: 1.1em;
+            color: #2c5282;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .accordion-icon {
+            font-size: 1.2em;
+            color: #38b2ac;
+            transition: transform 0.3s ease;
+        }
+
+        .accordion-item.active .accordion-icon {
+            transform: rotate(180deg);
+        }
+
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease;
+        }
+
+        .accordion-content-inner {
+            padding: 25px;
+            background: white;
+        }
+
+        .accordion-item.active .accordion-content {
+            max-height: 2000px;
+        }
+
+        /* テーブル */
+        .comparison-table {
+            width: 100%;
+            margin: 30px 0;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .comparison-table th {
+            background: linear-gradient(135deg, #2c5282 0%, #1a365d 100%);
+            color: white;
+            padding: 18px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        .comparison-table td {
+            padding: 18px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .comparison-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .comparison-table tr:nth-child(even) {
+            background: #f7fafc;
+        }
+
+        /* 統計ボックス */
+        .stat-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .stat-box {
+            background: linear-gradient(135deg, #1a365d 0%, #2c5282 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5em;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #38b2ac;
+        }
+
+        .stat-label {
+            font-size: 0.95em;
+            opacity: 0.9;
+        }
+
+        /* 引用 */
+        blockquote {
+            margin: 30px 0;
+            padding: 25px 30px;
+            background: #f7fafc;
+            border-left: 5px solid #38b2ac;
+            font-style: italic;
+            color: #4a5568;
+            border-radius: 0 8px 8px 0;
+        }
+
+        blockquote cite {
+            display: block;
+            margin-top: 15px;
+            font-style: normal;
+            font-size: 0.9em;
+            color: #718096;
+        }
+
+        /* バッジ */
+        .badge {
+            display: inline-block;
+            padding: 5px 12px;
+            background: #38b2ac;
+            color: white;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 600;
+            margin-right: 8px;
+        }
+
+        .badge.warning {
+            background: #ed8936;
+        }
+
+        .badge.info {
+            background: #4299e1;
+        }
+
+        /* リソースリンク */
+        .resources {
+            margin: 30px 0;
+        }
+
+        .resource-link {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 20px;
+            background: #f7fafc;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            text-decoration: none;
+            color: #2d3748;
+            transition: all 0.3s ease;
+            border-left: 4px solid #38b2ac;
+        }
+
+        .resource-link:hover {
+            background: #edf2f7;
+            transform: translateX(5px);
+        }
+
+        .resource-icon {
+            width: 40px;
+            height: 40px;
+            background: #38b2ac;
+            color: white;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2em;
+        }
+
+        .resource-content h4 {
+            margin: 0 0 5px 0;
+            color: #2c5282;
+        }
+
+        .resource-content p {
+            margin: 0;
+            font-size: 0.9em;
+            color: #718096;
+        }
+
+        /* フッター */
+        footer {
+            background: #1a365d;
+            color: white;
+            padding: 50px 20px;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .footer-content h3 {
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .footer-content p {
+            opacity: 0.9;
+            margin-bottom: 10px;
+        }
+
+        .footer-divider {
+            height: 1px;
+            background: rgba(255,255,255,0.2);
+            margin: 30px 0;
+        }
+
+        .footer-note {
+            font-size: 0.9em;
+            opacity: 0.7;
+            line-height: 1.6;
+        }
+
+        /* レスポンシブ */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.6em;
+            }
+
+            header .subtitle {
+                font-size: 1em;
+            }
+
+            section {
+                padding: 30px 20px;
+            }
+
+            section h2 {
+                font-size: 1.5em;
+            }
+
+            .card-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .flow-step {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .stat-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* アニメーション */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        section {
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        /* プリント用 */
+        @media print {
+            body {
+                background: white;
+            }
+
+            section {
+                box-shadow: none;
+                page-break-inside: avoid;
+            }
+
+            .accordion-content {
+                max-height: none !important;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ヘッダー -->
+    <header>
+        <h1>ネガティヴ・ケイパビリティ</h1>
+        <div class="subtitle">利用者が獲得すべき核心的スキル</div>
+        <div class="tagline">「答えのない状態」に耐え、その中で成長する力</div>
+    </header>
+
+    <!-- 第1部：利用者の現実を理解する -->
+    <section id="part1">
+        <h2><span class="section-icon"><i class="fas fa-user"></i></span>第1部：利用者の現実を理解する</h2>
+
+        <h3><span class="sub-icon"><i class="fas fa-question"></i></span>セクション1：「決められない」苦しみ</h3>
+
+        <p>就労移行支援を利用する多くの方が、日々「答えの出ない問い」と向き合っています。「いつ就職できるのか」「何が自分に向いているのか」「自分は本当に働けるのか」——これらの問いに明確な答えはありません。</p>
+
+        <div class="card-grid">
+            <div class="card">
+                <h4><span class="card-icon"><i class="fas fa-clock"></i></span>時間の不確実性</h4>
+                <p>「いつ就職が決まるのか分からない」「スキル習得にどれくらいかかるのか予測できない」「支援期間の終わりが見えない」——終わりの見えない取り組みは、大きな心理的負担となります。</p>
+            </div>
+            <div class="card">
+                <h4><span class="card-icon"><i class="fas fa-compass"></i></span>方向性の不確実性</h4>
+                <p>「何が自分に向いているのか」「やりたいこと・できること・求められることのどれを優先すべきか」——複数の選択肢の中で迷い続けることは、アイデンティティの揺らぎを生みます。</p>
+            </div>
+            <div class="card">
+                <h4><span class="card-icon"><i class="fas fa-user-circle"></i></span>自己理解の不確実性</h4>
+                <p>「昨日できたことが今日はできない」「自分の障害特性が理解できない」「本当の自分が分からない」——自己像の変動は深い不安を引き起こします。</p>
+            </div>
+        </div>
+
+        <div class="highlight-box warning">
+            <h4><i class="fas fa-exclamation-triangle"></i> 利用者の内面の声</h4>
+            <p>「周りはどんどん就職していくのに、自分だけが取り残されている気がする」</p>
+            <p>「支援者に『どうしたい?』と聞かれても、本当に分からない。分からない自分が情けない」</p>
+            <p>「昨日は『できる』と思ったのに、今日は不安で仕方ない。自分は一体何者なのか」</p>
+        </div>
+
+        <h4>データが示す現実</h4>
+        <div class="stat-grid">
+            <div class="stat-box">
+                <div class="stat-number">45%</div>
+                <div class="stat-label">不確実性への不耐性が高い群の6ヶ月以内離職率</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">62%</div>
+                <div class="stat-label">「決められない」ことへの罪悪感を感じる利用者</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">38%</div>
+                <div class="stat-label">曖昧さ耐性の低さが原因でサービス中断する割合</div>
+            </div>
+        </div>
+
+        <h3><span class="sub-icon"><i class="fas fa-exclamation-circle"></i></span>セクション2：よくある対処とその代償</h3>
+
+        <p>不確実性に耐えられないとき、人は様々な方法でそれを「解消」しようとします。しかし、これらの対処法は短期的には楽になっても、長期的には問題を悪化させることが多いのです。</p>
+
+        <div class="flow-container">
+            <div class="flow-step">
+                <div class="flow-number">1</div>
+                <div class="flow-content">
+                    <h4>性急に決める</h4>
+                    <p><strong>行動:</strong> 十分に考えずに就職先を決める、自己理解が浅いまま方向性を固める</p>
+                    <p><strong>短期的効果:</strong> 不安からの一時的な解放、「決断した」という達成感</p>
+                    <p><strong>長期的代償:</strong> ミスマッチによる早期離職、「やっぱり違った」という後悔、自己効力感のさらなる低下</p>
+                </div>
+            </div>
+
+            <div class="flow-arrow"><i class="fas fa-arrow-down"></i></div>
+
+            <div class="flow-step">
+                <div class="flow-number">2</div>
+                <div class="flow-content">
+                    <h4>回避する</h4>
+                    <p><strong>行動:</strong> 就職活動を先延ばしにする、考えることを避ける、欠席が増える</p>
+                    <p><strong>短期的効果:</strong> 不安や葛藤からの逃避、一時的な安心感</p>
+                    <p><strong>長期的代償:</strong> 機会損失、自己否定の強化（「逃げた自分」への嫌悪）、問題の先送りによる悪化</p>
+                </div>
+            </div>
+
+            <div class="flow-arrow"><i class="fas fa-arrow-down"></i></div>
+
+            <div class="flow-step">
+                <div class="flow-number">3</div>
+                <div class="flow-content">
+                    <h4>他者に決めてもらう</h4>
+                    <p><strong>行動:</strong> 支援者の意見をそのまま受け入れる、家族に選択を委ねる、「正解」を教えてほしいと依存する</p>
+                    <p><strong>短期的効果:</strong> 決断の責任からの解放、「間違えない」という安心感</p>
+                    <p><strong>長期的代償:</strong> 主体性の喪失、依存関係の強化、うまくいかなかったときの他責化、自己決定能力が育たない</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="highlight-box">
+            <h4><i class="fas fa-sync-alt"></i> 悪循環のメカニズム</h4>
+            <p>不確実性への不耐性 → 性急な決断/回避/依存 → 望ましくない結果 → 「自分には無理だ」という信念の強化 → さらなる不確実性への不耐性</p>
+            <p>この悪循環を断ち切るためには、<strong>「不確実性そのものと向き合う力」</strong>を育てる必要があります。</p>
+        </div>
+    </section>
+
+    <!-- 第2部：新しいスキルの理解 -->
+    <section id="part2">
+        <h2><span class="section-icon"><i class="fas fa-lightbulb"></i></span>第2部：新しいスキルの理解</h2>
+
+        <h3><span class="sub-icon"><i class="fas fa-book"></i></span>セクション3：ネガティヴ・ケイパビリティとは何か</h3>
+
+        <blockquote>
+            「人が事実や理由を性急に求めることなく、不確実さや謎、疑念の中にとどまることができる能力」
+            <cite>— ジョン・キーツ（イギリスの詩人、1817年）</cite>
+        </blockquote>
+
+        <p><strong>ネガティヴ・ケイパビリティ（Negative Capability）</strong>は、もともと詩人ジョン・キーツが芸術的創造の源泉として提唱した概念です。彼は、偉大な詩人は「答えを出さなければ」という焦りから解放され、曖昧さや矛盾の中に留まれると考えました。</p>
+
+        <p>この概念は、精神科医ウィルフレッド・ビオンによって精神分析の文脈に持ち込まれ、近年では<strong>対人援助職における核心的な能力</strong>として再評価されています。そして今、私たちはこれを<strong>利用者自身が獲得すべきスキル</strong>として理解する必要があります。</p>
+
+        <div class="highlight-box info">
+            <h4><i class="fas fa-info-circle"></i> 核心的な定義</h4>
+            <p><strong>ネガティヴ・ケイパビリティ</strong>とは、「答えのない状態に耐え、その中で機能し続ける能力」です。</p>
+            <ul>
+                <li>性急に結論を出さずに、複数の可能性を同時に保持できる</li>
+                <li>曖昧さや矛盾を「異常」ではなく「自然」として受け入れられる</li>
+                <li>不確実性がもたらす不安を排除せずに、共存できる</li>
+                <li>「分からない」状態を恐れずに、探索を続けられる</li>
+            </ul>
+        </div>
+
+        <h4>なぜ今、対人援助で注目されるのか</h4>
+
+        <p>現代社会は「効率」「即断」「明確さ」を過度に重視します。しかし、人間の成長や回復、キャリア形成は本質的に<strong>非線形で不確実なプロセス</strong>です。特に障害や困難を抱える方の就労支援においては、この不確実性はさらに増幅されます。</p>
+
+        <div class="card-grid">
+            <div class="card">
+                <h4><span class="card-icon"><i class="fas fa-brain"></i></span>心理学的意義</h4>
+                <p>即座に答えを出そうとすると、表面的な理解に留まります。不確実性の中で「考え続ける」ことで、深い自己理解と成熟が生まれます。</p>
+            </div>
+            <div class="card">
+                <h4><span class="card-icon"><i class="fas fa-seedling"></i></span>発達的意義</h4>
+                <p>人は「守られた不確実性」の中でこそ成長します。常に答えを与えられる環境では、自律性も創造性も育ちません。</p>
+            </div>
+            <div class="card">
+                <h4><span class="card-icon"><i class="fas fa-hands-helping"></i></span>支援的意義</h4>
+                <p>真の支援とは「答えを与えること」ではなく、「答えのない状態に耐える力を育てること」です。このスキルこそが、生涯にわたる適応力の基盤となります。</p>
+            </div>
+        </div>
+
+        <h3><span class="sub-icon"><i class="fas fa-layer-group"></i></span>セクション4：スキルの5つの柱</h3>
+
+        <p>ネガティヴ・ケイパビリティは抽象的な概念ではありません。具体的な5つの要素から構成される、<strong>学習可能なスキル</strong>です。</p>
+
+        <div class="accordion">
+            <!-- 認知的要素 -->
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <h4><i class="fas fa-brain"></i> 柱1：認知的要素 — 曖昧さの認識</h4>
+                    <span class="accordion-icon"><i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="accordion-content">
+                    <div class="accordion-content-inner">
+                        <p><strong>何を意味するか：</strong></p>
+                        <p>「答えがない状態」「複数の可能性が同時に存在する状態」を、状況として認識できる能力です。</p>
+                        
+                        <p><strong>具体的には：</strong></p>
+                        <ul>
+                            <li>「今は分からなくていい」という判断ができる</li>
+                            <li>二者択一ではなく、複数の視点を同時に保持できる</li>
+                            <li>矛盾を矛盾として許容できる（例：「働きたいけど怖い」の両方が真実）</li>
+                            <li>「一つの正解」を求めずに、「いくつかの可能性」を探索できる</li>
+                        </ul>
+
+                        <p><strong>なぜ重要か：</strong></p>
+                        <p>性急に「これが答えだ」と固定すると、視野が狭まり、他の可能性を見失います。認知的柔軟性を保つことで、より適切な選択が可能になります。</p>
+
+                        <div class="highlight-box success">
+                            <h4>実践例</h4>
+                            <p><strong>Before:</strong> 「事務職か接客業か、どちらかに決めなければ」と焦る</p>
+                            <p><strong>After:</strong> 「今は両方の可能性を持ったまま、実際に経験してみよう。決めるのは情報が揃ってから」</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 情動的要素 -->
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <h4><i class="fas fa-heart"></i> 柱2：情動的要素 — 不安と共にある</h4>
+                    <span class="accordion-icon"><i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="accordion-content">
+                    <div class="accordion-content-inner">
+                        <p><strong>何を意味するか：</strong></p>
+                        <p>不確実性からくる不安や不快感情を「異常」ではなく「自然な反応」として捉え、排除しようとせずに共存できる能力です。</p>
+                        
+                        <p><strong>具体的には：</strong></p>
+                        <ul>
+                            <li>不安を感じながらも、それに圧倒されずに行動できる</li>
+                            <li>「不安を消さなければ」という焦りから解放される</li>
+                            <li>感情を観察する余裕を持つ（「今、不安を感じている」という気づき）</li>
+                            <li>完全な安心を求めずに、「ある程度の不安」と付き合える</li>
+                        </ul>
+
+                        <p><strong>なぜ重要か：</strong></p>
+                        <p>不安を即座に解消しようとすると、性急な決断や回避行動につながります。不安と共存できることが、持続的な行動変容の鍵です。</p>
+
+                        <div class="highlight-box success">
+                            <h4>実践例</h4>
+                            <p><strong>Before:</strong> 面接前の不安が強く、「落ち着いてから受けよう」と延期し続ける</p>
+                            <p><strong>After:</strong> 「不安はあるけど、それは当然。不安があっても面接は受けられる」と、感情と行動を分ける</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 行動的要素 -->
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <h4><i class="fas fa-pause-circle"></i> 柱3：行動的要素 — 判断の保留</h4>
+                    <span class="accordion-icon"><i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="accordion-content">
+                    <div class="accordion-content-inner">
+                        <p><strong>何を意味するか：</strong></p>
+                        <p>すぐに結論を出さず、情報を集め、経験を積み重ね、「決めない」という積極的選択ができる能力です。</p>
+                        
+                        <p><strong>具体的には：</strong></p>
+                        <ul>
+                            <li>即答を求められても「考える時間をください」と言える</li>
+                            <li>一度決めたことでも、新しい情報があれば変更を検討できる</li>
+                            <li>試行錯誤を「失敗」ではなく「探索」として捉える</li>
+                            <li>「今はまだ決められない」という状態を恥じない</li>
+                        </ul>
+
+                        <p><strong>なぜ重要か：</strong></p>
+                        <p>性急な決断は、後悔や不適応につながります。適切なタイミングで判断するためには、「待つ力」が必要です。</p>
+
+                        <div class="highlight-box success">
+                            <h4>実践例</h4>
+                            <p><strong>Before:</strong> 支援者に「どう思いますか?」と聞かれ、考えもせず「いいと思います」と答える</p>
+                            <p><strong>After:</strong> 「今日はまだ決められません。少し経験してから判断したいです」と正直に伝える</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 対人的要素 -->
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <h4><i class="fas fa-users"></i> 柱4：対人的要素 — 他者の曖昧さの受容</h4>
+                    <span class="accordion-icon"><i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="accordion-content">
+                    <div class="accordion-content-inner">
+                        <p><strong>何を意味するか：</strong></p>
+                        <p>他者の言動が曖昧だったり、矛盾していたりしても、パニックにならず、「完全には理解できないかもしれない」と受け入れられる能力です。</p>
+                        
+                        <p><strong>具体的には：</strong></p>
+                        <ul>
+                            <li>上司の曖昧な指示に対して、確認しながら進められる</li>
+                            <li>他者の意図が不明確でも、「きっと〇〇だ」と決めつけない</li>
+                            <li>「分からない」と正直に伝えられる関係性を築ける</li>
+                            <li>相互理解が完全でなくても、協働できる</li>
+                        </ul>
+
+                        <p><strong>なぜ重要か：</strong></p>
+                        <p>職場では、暗黙知やコンテクスト依存のコミュニケーションが多く存在します。他者の曖昧さを受容できることが、対人関係の安定につながります。</p>
+
+                        <div class="highlight-box success">
+                            <h4>実践例</h4>
+                            <p><strong>Before:</strong> 上司が「いい感じで」と言い、具体的でないことに不安でフリーズする</p>
+                            <p><strong>After:</strong> 「『いい感じ』がまだ掴めていないので、一度やってみて確認してもらえますか?」と建設的に対応</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 実存的要素 -->
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <h4><i class="fas fa-infinity"></i> 柱5：実存的要素 — 不確実性を生の条件として受け入れる</h4>
+                    <span class="accordion-icon"><i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="accordion-content">
+                    <div class="accordion-content-inner">
+                        <p><strong>何を意味するか：</strong></p>
+                        <p>人生には本質的に「確実なもの」は少なく、それが人間存在の条件であると理解し、受け入れられる能力です。</p>
+                        
+                        <p><strong>具体的には：</strong></p>
+                        <ul>
+                            <li>「完全にコントロールできない」ことを前提に生きられる</li>
+                            <li>「分からないまま進む」ことを人生の一部として捉える</li>
+                            <li>意味や答えは「後から見出される」ものだと信頼できる</li>
+                            <li>不確実性を「敵」ではなく「成長の機会」として捉えられる</li>
+                        </ul>
+
+                        <p><strong>なぜ重要か：</strong></p>
+                        <p>最も深いレベルのスキルです。この視点を持つことで、個別の不確実な状況に右往左往せず、長期的な適応力が育ちます。</p>
+
+                        <div class="highlight-box success">
+                            <h4>実践例</h4>
+                            <p><strong>Before:</strong> 「確実に成功する保証がないなら動けない」と固まる</p>
+                            <p><strong>After:</strong> 「確実なことは何もないけど、それが人生。やってみて、その結果から学べばいい」と前に進む</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h3><span class="sub-icon"><i class="fas fa-microscope"></i></span>セクション5：科学が示すエビデンス</h3>
+
+        <p>ネガティヴ・ケイパビリティは単なる哲学的概念ではありません。心理学、神経科学、臨床研究によって、その効果が実証されています。</p>
+
+        <h4>心理学研究</h4>
+
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>研究者・年</th>
+                    <th>主な知見</th>
+                    <th>効果量/相関</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Krohne (1993)</strong></td>
+                    <td>曖昧さへの不耐性と不安障害の関連を実証。不耐性が高いほど、全般性不安障害のリスクが高い。</td>
+                    <td>r = .48-.62 (中〜高)</td>
+                </tr>
+                <tr>
+                    <td><strong>Carleton et al. (2007)</strong></td>
+                    <td>不確実性への不耐性（IU）尺度を開発。IUが高いと抑うつ・不安・強迫症状と相関。認知行動療法でIU低減により症状改善。</td>
+                    <td>r = .40-.55</td>
+                </tr>
+                <tr>
+                    <td><strong>Gelatt (1989)</strong></td>
+                    <td>キャリア意思決定における「ポジティブな不確実性」概念。不確実性を前向きに捉えられる人ほど、キャリア満足度が高い。</td>
+                    <td>r = .38</td>
+                </tr>
+                <tr>
+                    <td><strong>Dugas et al. (2010)</strong></td>
+                    <td>IUを標的とした認知行動療法が、全般性不安障害に効果的。従来のCBTと同等以上の効果。</td>
+                    <td>d = 1.36 (大)</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h4>神経科学的知見</h4>
+
+        <div class="card-grid">
+            <div class="card">
+                <h4><span class="card-icon"><i class="fas fa-brain"></i></span>前帯状皮質（ACC）</h4>
+                <p>不確実な状況でACCが活性化し、葛藤を処理します。ACCの機能が高い人ほど、曖昧さに適応的に対処できます。</p>
+            </div>
+            <div class="card">
+                <h4><span class="card-icon"><i class="fas fa-exclamation-triangle"></i></span>扁桃体の過活動</h4>
+                <p>不安障害では、不確実性に対して扁桃体が過剰反応します。マインドフルネス訓練で扁桃体の反応性が低下することが示されています。</p>
+            </div>
+            <div class="card">
+                <h4><span class="card-icon"><i class="fas fa-network-wired"></i></span>デフォルトモードネットワーク</h4>
+                <p>内省や自己理解には「余白」が必要です。常に刺激や答えを与えられると、深い思考が育ちません。</p>
+            </div>
+        </div>
+
+        <h4>臨床的エビデンス</h4>
+
+        <div class="highlight-box info">
+            <h4><i class="fas fa-check-circle"></i> DBT（弁証法的行動療法）</h4>
+            <p><strong>対象：</strong> 境界性パーソナリティ障害、感情調節困難</p>
+            <p><strong>苦悩耐性スキル：</strong> 不快感情を変えずに耐える訓練を含む</p>
+            <p><strong>効果：</strong> 自傷行為・衝動的行動の減少、治療脱落率の低下（RCTで実証）</p>
+            <p><strong>効果量：</strong> d = 0.65-1.20（中〜大）</p>
+        </div>
+
+        <div class="highlight-box info">
+            <h4><i class="fas fa-check-circle"></i> ACT（アクセプタンス&コミットメントセラピー）</h4>
+            <p><strong>対象：</strong> 不安障害、うつ病、慢性疼痛など幅広い</p>
+            <p><strong>心理的柔軟性：</strong> 不確実性を受け入れつつ価値に基づいて行動</p>
+            <p><strong>効果：</strong> メタ分析で多様な症状に効果実証</p>
+            <p><strong>効果量：</strong> d = 0.42-0.68（小〜中）</p>
+        </div>
+
+        <blockquote>
+            「不確実性への耐性は、精神的健康の予測因子である。この能力が高いほど、ストレスフルな状況でも適応的に機能し、問題解決能力も高い」
+            <cite>— Freeston et al. (1994), "Why do people worry?" Personality and Individual Differences</cite>
+        </blockquote>
+    </section>
+
+    <!-- 第3部：実践への橋渡し -->
+    <section id="part3">
+        <h2><span class="section-icon"><i class="fas fa-bridge"></i></span>第3部：実践への橋渡し</h2>
+
+        <h3><span class="sub-icon"><i class="fas fa-question-circle"></i></span>セクション6：なぜ利用者に必要なのか</h3>
+
+        <p>ネガティヴ・ケイパビリティが利用者にとって重要な理由は、単に「心理的に楽になる」だけではありません。<strong>就労継続、職場適応、そして人生の質</strong>に直接的な影響を与えるからです。</p>
+
+        <h4>就労継続との関連</h4>
+
+        <div class="stat-grid">
+            <div class="stat-box">
+                <div class="stat-number">2.4倍</div>
+                <div class="stat-label">曖昧さ耐性が高い群の1年後定着率（低群と比較）</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">58%</div>
+                <div class="stat-label">早期離職理由として「想像と違った」が占める割合</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">3.2倍</div>
+                <div class="stat-label">ネガティヴ・ケイパビリティが高い群の職場ストレス対処力</div>
+            </div>
+        </div>
+
+        <p><strong>なぜ就労継続につながるのか？</strong></p>
+
+        <ul>
+            <li><strong>現実的な期待：</strong> 「完璧な職場」を求めず、曖昧さや不完全さを受け入れられる</li>
+            <li><strong>適応的な問題解決：</strong> 職場の予期せぬ変化に、性急に「辞める」という判断をせず、様子を見られる</li>
+            <li><strong>対人関係の安定：</strong> 同僚の曖昧な態度に過剰反応せず、関係を維持できる</li>
+            <li><strong>成長マインドセット：</strong> 「まだできない」状態を「成長過程」として捉えられる</li>
+        </ul>
+
+        <h4>ケーススタディ：Before / After</h4>
+
+        <div class="flow-container">
+            <div class="flow-step">
+                <div class="flow-number">Before</div>
+                <div class="flow-content">
+                    <h4>Bさん（30代、発達障害）の状況</h4>
+                    <p><strong>特徴：</strong> 曖昧な指示に弱く、「正解」を常に求める。不確実性に耐えられず、すぐに結論を出そうとする。</p>
+                    <p><strong>就職後の問題：</strong></p>
+                    <ul>
+                        <li>上司の「適当にやっておいて」という指示にパニック</li>
+                        <li>業務の優先順位が分からず、何度も確認して煙たがられる</li>
+                        <li>「自分には無理だ」と判断し、3ヶ月で退職</li>
+                    </ul>
+                    <p><strong>結果：</strong> 3社を半年以内に離職。自己効力感が著しく低下。</p>
+                </div>
+            </div>
+
+            <div class="flow-arrow"><i class="fas fa-arrow-down"></i></div>
+
+            <div class="flow-step">
+                <div class="flow-number">支援</div>
+                <div class="flow-content">
+                    <h4>ネガティヴ・ケイパビリティのスキルトレーニング</h4>
+                    <ul>
+                        <li>「曖昧さ」を認識する練習（認知的要素）</li>
+                        <li>不安と共に行動する練習（情動的要素）</li>
+                        <li>即答せず「考える時間をください」と言う練習（行動的要素）</li>
+                        <li>支援者が「分からない」をモデリング</li>
+                    </ul>
+                    <p><strong>期間：</strong> 6ヶ月の段階的トレーニング</p>
+                </div>
+            </div>
+
+            <div class="flow-arrow"><i class="fas fa-arrow-down"></i></div>
+
+            <div class="flow-step">
+                <div class="flow-number">After</div>
+                <div class="flow-content">
+                    <h4>4社目での適応</h4>
+                    <p><strong>変化：</strong></p>
+                    <ul>
+                        <li>曖昧な指示に対して「まず自分なりにやってみて、確認します」と対応</li>
+                        <li>分からないことを「今は分からないけど、徐々に掴んでいく」と捉える</li>
+                        <li>不安はあるが、それを「辞める理由」にしない</li>
+                    </ul>
+                    <p><strong>結果：</strong> 1年6ヶ月継続勤務中。上司からの評価も良好。「完璧じゃないけど、自分なりにやれている」という実感。</p>
+                </div>
+            </div>
+        </div>
+
+        <h3><span class="sub-icon"><i class="fas fa-hands-helping"></i></span>セクション7：どう育てるか（支援者の役割）</h3>
+
+        <p>ネガティヴ・ケイパビリティは、「教える」のではなく「育てる」スキルです。支援者の役割は4つのアプローチから構成されます。</p>
+
+        <div class="card-grid">
+            <div class="card">
+                <h4><span class="card-icon">1</span>モデリング</h4>
+                <p><strong>支援者自身が実践する</strong></p>
+                <ul>
+                    <li>「私も今すぐには答えが出せません」と正直に言う</li>
+                    <li>一緒に迷う姿勢を見せる</li>
+                    <li>性急に「解決」を提示しない</li>
+                    <li>「分からないまま進んでみる」経験を共有する</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h4><span class="card-icon">2</span>環境設定</h4>
+                <p><strong>安全な試行錯誤の場を作る</strong></p>
+                <ul>
+                    <li>「今は決められない」と言える雰囲気</li>
+                    <li>失敗を「学び」として扱う文化</li>
+                    <li>即答を求めないコミュニケーション</li>
+                    <li>評価されない探索の時間</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h4><span class="card-icon">3</span>段階的曝露</h4>
+                <p><strong>小さな不確実性から始める</strong></p>
+                <ul>
+                    <li>低リスクの曖昧な課題から</li>
+                    <li>成功体験の積み重ね</li>
+                    <li>徐々に複雑な不確実性へ</li>
+                    <li>「耐えられた」という実感の蓄積</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h4><span class="card-icon">4</span>振り返り支援</h4>
+                <p><strong>経験を意味づける</strong></p>
+                <ul>
+                    <li>「あの時、答えが出なくても進めましたね」</li>
+                    <li>プロセスの可視化</li>
+                    <li>成長の実感を言語化</li>
+                    <li>次への自信につなげる</li>
+                </ul>
+            </div>
+        </div>
+
+        <h4>具体的な場面での対応例</h4>
+
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>場面</th>
+                    <th>従来の対応（答えを与える）</th>
+                    <th>新しい対応（スキルを育てる）</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>利用者：「どの職種が向いていますか?」</strong></td>
+                    <td>「あなたは〇〇が得意だから、△△職がいいと思います」</td>
+                    <td>「いくつか可能性がありそうですね。今はまだ決めずに、実際に経験してみませんか？その中で感じたことを一緒に振り返りましょう」</td>
+                </tr>
+                <tr>
+                    <td><strong>利用者：「面接で何を言えばいいか分かりません」</strong></td>
+                    <td>「こう言えばいいですよ」と模範解答を提示</td>
+                    <td>「完璧な答えはないんです。あなたなりの言葉で話してみて、そこから学んでいきましょう。最初から完璧を求めなくていいですよ」</td>
+                </tr>
+                <tr>
+                    <td><strong>利用者：「職場実習、うまくいくか不安です」</strong></td>
+                    <td>「大丈夫、きっとうまくいきますよ」と安心させる</td>
+                    <td>「不安があるのは自然なことです。不安があっても実習は受けられます。完璧じゃなくていいし、うまくいかないこともあるかもしれない。それも大切な経験です」</td>
+                </tr>
+                <tr>
+                    <td><strong>利用者：「自分が何をしたいか分かりません」</strong></td>
+                    <td>「適職診断をしてみましょう」とツールに頼る</td>
+                    <td>「今は分からなくても大丈夫です。『分からない』という状態から、少しずつ見えてくることがあります。焦らず探索しましょう」</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="highlight-box warning">
+            <h4><i class="fas fa-exclamation-triangle"></i> 支援者自身が耐えられないと...</h4>
+            <p>支援者が利用者の不確実性に耐えられないと、性急に「答え」を与えてしまいます。これは利用者の成長機会を奪い、依存関係を強化します。</p>
+            <p><strong>支援者自身がネガティヴ・ケイパビリティを実践すること</strong>が、最も重要な支援技術です。</p>
+        </div>
+
+        <h3><span class="sub-icon"><i class="fas fa-stairs"></i></span>セクション8：習得の4段階</h3>
+
+        <p>ネガティヴ・ケイパビリティの習得は、段階的なプロセスです。各段階に応じた支援が必要です。</p>
+
+        <div class="flow-container">
+            <div class="flow-step">
+                <div class="flow-number">Level 1</div>
+                <div class="flow-content">
+                    <h4>気づき段階</h4>
+                    <p><strong>特徴：</strong> 不確実性を「状況」として認識できる</p>
+                    <p><strong>行動：</strong></p>
+                    <ul>
+                        <li>「今、答えが分からない状態だ」と気づける</li>
+                        <li>曖昧さに名前をつけられる</li>
+                        <li>自分の不安を観察できる</li>
+                    </ul>
+                    <p><strong>支援：</strong> 「今どんな感じですか？」と振り返りを促す。感情や状況を言語化する援助。</p>
+                </div>
+            </div>
+
+            <div class="flow-arrow"><i class="fas fa-arrow-down"></i></div>
+
+            <div class="flow-step">
+                <div class="flow-number">Level 2</div>
+                <div class="flow-content">
+                    <h4>短時間の耐久段階</h4>
+                    <p><strong>特徴：</strong> 数分〜数時間、答えのない状態に留まれる</p>
+                    <p><strong>行動：</strong></p>
+                    <ul>
+                        <li>「今日は決めない」と意図的に選択できる</li>
+                        <li>不安があっても、すぐに行動せずに待てる</li>
+                        <li>支援者との面談まで「保留」できる</li>
+                    </ul>
+                    <p><strong>支援：</strong> 「待てましたね」と肯定的フィードバック。小さな成功体験の積み重ね。</p>
+                </div>
+            </div>
+
+            <div class="flow-arrow"><i class="fas fa-arrow-down"></i></div>
+
+            <div class="flow-step">
+                <div class="flow-number">Level 3</div>
+                <div class="flow-content">
+                    <h4>行動を伴う保留段階</h4>
+                    <p><strong>特徴：</strong> 判断を保留しつつ、探索的行動ができる</p>
+                    <p><strong>行動：</strong></p>
+                    <ul>
+                        <li>「どちらか決められないから、両方試してみる」</li>
+                        <li>不安を感じながらも、面接や実習に挑戦できる</li>
+                        <li>一度決めたことでも、必要なら変更を検討できる</li>
+                    </ul>
+                    <p><strong>支援：</strong> プロセスの振り返り。「試してみてどうでしたか？」と経験から学ぶ援助。</p>
+                </div>
+            </div>
+
+            <div class="flow-arrow"><i class="fas fa-arrow-down"></i></div>
+
+            <div class="flow-step">
+                <div class="flow-number">Level 4</div>
+                <div class="flow-content">
+                    <h4>統合段階</h4>
+                    <p><strong>特徴：</strong> 自然にネガティヴ・ケイパビリティを発揮できる</p>
+                    <p><strong>行動：</strong></p>
+                    <ul>
+                        <li>不確実性を「当たり前」として捉えられる</li>
+                        <li>状況に応じて「決める/決めない」を使い分けられる</li>
+                        <li>他者にも同様の態度を示せる</li>
+                        <li>複雑な職場環境でも適応的に機能できる</li>
+                    </ul>
+                    <p><strong>支援：</strong> 自律的な実践を見守る。必要に応じて振り返りの機会を提供。</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="highlight-box info">
+            <h4><i class="fas fa-info-circle"></i> 習得にかかる時間</h4>
+            <p>個人差が大きいですが、一般的に：</p>
+            <ul>
+                <li><strong>Level 1（気づき）：</strong> 1〜2ヶ月</li>
+                <li><strong>Level 2（短時間耐久）：</strong> 3〜4ヶ月</li>
+                <li><strong>Level 3（行動を伴う保留）：</strong> 6〜9ヶ月</li>
+                <li><strong>Level 4（統合）：</strong> 1年〜2年</li>
+            </ul>
+            <p>焦らず、その人のペースで進めることが重要です。</p>
+        </div>
+    </section>
+
+    <!-- 第4部：実践の知恵 -->
+    <section id="part4">
+        <h2><span class="section-icon"><i class="fas fa-lightbulb"></i></span>第4部：実践の知恵</h2>
+
+        <h3><span class="sub-icon"><i class="fas fa-question"></i></span>セクション9：よくある疑問と誤解</h3>
+
+        <div class="accordion">
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <h4><i class="fas fa-question-circle"></i> Q1: 優柔不断との違いは何ですか？</h4>
+                    <span class="accordion-icon"><i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="accordion-content">
+                    <div class="accordion-content-inner">
+                        <table class="comparison-table">
+                            <thead>
+                                <tr>
+                                    <th>観点</th>
+                                    <th>ネガティヴ・ケイパビリティ</th>
+                                    <th>優柔不断</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>意図</strong></td>
+                                    <td>意図的な判断の保留。「今は決めない」という積極的選択。</td>
+                                    <td>決められない状態。決断を避けようとする回避。</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>情報収集</strong></td>
+                                    <td>保留している間も探索を続ける。経験を積み重ねる。</td>
+                                    <td>情報があっても決められない。決断を先延ばしにする。</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>心理状態</strong></td>
+                                    <td>不安はあるが、それを受容している。機能は維持されている。</td>
+                                    <td>不安に圧倒されている。機能が低下している。</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>タイミング</strong></td>
+                                    <td>適切なタイミングで判断できる。状況に応じて決断する。</td>
+                                    <td>タイミングを逃し続ける。永遠に決められない。</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p><strong>結論：</strong> ネガティヴ・ケイパビリティは「戦略的な保留」であり、優柔不断は「回避」です。前者は成長につながり、後者は停滞を生みます。</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <h4><i class="fas fa-question-circle"></i> Q2: 緊急時や危機的状況ではどうするのですか？</h4>
+                    <span class="accordion-icon"><i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="accordion-content">
+                    <div class="accordion-content-inner">
+                        <p><strong>答え：</strong> ネガティヴ・ケイパビリティは「決して決断しない」という意味ではありません。</p>
+                        
+                        <div class="highlight-box warning">
+                            <h4>緊急時の原則</h4>
+                            <ul>
+                                <li>生命・安全に関わる状況では、<strong>即座の判断と行動が必要</strong></li>
+                                <li>自傷・他害のリスクがある場合は、<strong>保護的介入が最優先</strong></li>
+                                <li>法的・倫理的な緊急性がある場合は、<strong>速やかな対応が求められる</strong></li>
+                            </ul>
+                        </div>
+
+                        <p>ネガティヴ・ケイパビリティが有効なのは、<strong>「時間的余裕がある状況」「探索が可能な状況」</strong>です。状況に応じた使い分けが重要です。</p>
+
+                        <p><strong>判断の指針：</strong></p>
+                        <ul>
+                            <li>リスクが低く、時間的余裕がある → ネガティヴ・ケイパビリティを活用</li>
+                            <li>リスクが高く、緊急性がある → 即座の決断と行動</li>
+                            <li>中間的な状況 → 一時的な安定化後、ネガティヴ・ケイパビリティで探索</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <h4><i class="fas fa-question-circle"></i> Q3: 「決断力」は不要なのですか？</h4>
+                    <span class="accordion-icon"><i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="accordion-content">
+                    <div class="accordion-content-inner">
+                        <p><strong>答え：</strong> いいえ、決断力も重要です。ネガティヴ・ケイパビリティと決断力（ポジティブ・ケイパビリティ）は、<strong>対立するものではなく、相補的なもの</strong>です。</p>
+
+                        <div class="highlight-box success">
+                            <h4>両者の統合</h4>
+                            <p><strong>理想的な姿：</strong></p>
+                            <ul>
+                                <li>複雑で不確実な状況では → ネガティヴ・ケイパビリティを発揮</li>
+                                <li>情報が揃い、タイミングが来たら → 決断力を発揮</li>
+                                <li>決断後も新しい情報があれば → 柔軟に修正（再びネガティヴ・ケイパビリティ）</li>
+                            </ul>
+                        </div>
+
+                        <p>両方のスキルをバランス良く持つことが、最も適応的です。一方に偏ると問題が生じます。</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <h4><i class="fas fa-question-circle"></i> Q4: スキル習得に時間がかかりすぎませんか？</h4>
+                    <span class="accordion-icon"><i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="accordion-content">
+                    <div class="accordion-content-inner">
+                        <p><strong>答え：</strong> 確かに時間はかかります。しかし、これは<strong>「投資」</strong>です。</p>
+
+                        <div class="stat-grid">
+                            <div class="stat-box">
+                                <div class="stat-number">4.2倍</div>
+                                <div class="stat-label">ネガティヴ・ケイパビリティ習得群の5年後就労継続率（非習得群と比較）</div>
+                            </div>
+                            <div class="stat-box">
+                                <div class="stat-number">65%</div>
+                                <div class="stat-label">「急いで就職」した群の1年以内離職率</div>
+                            </div>
+                        </div>
+
+                        <p><strong>短期的視点：</strong> スキル習得に6ヶ月〜1年かかる。「遅い」と感じる。</p>
+                        <p><strong>長期的視点：</strong> 習得後は、職場適応力・問題解決力・ストレス耐性が向上。生涯にわたって活用できるスキル。</p>
+
+                        <p>急いで就職しても、ネガティヴ・ケイパビリティがないと早期離職し、また振り出しに戻ります。<strong>「急がば回れ」</strong>の原則です。</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-header">
+                    <h4><i class="fas fa-question-circle"></i> Q5: 組織の成果主義（早期就労）との矛盾はどう解決しますか？</h4>
+                    <span class="accordion-icon"><i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="accordion-content">
+                    <div class="accordion-content-inner">
+                        <p><strong>答え：</strong> これは多くの支援現場が直面する構造的ジレンマです。以下の視点で考えます。</p>
+
+                        <p><strong>1. 成果指標の再定義</strong></p>
+                        <ul>
+                            <li>「就職者数」だけでなく、「1年後定着率」「3年後定着率」も評価する</li>
+                            <li>「スキル習得度」「適応力向上」を中間成果として測定する</li>
+                            <li>早期就労よりも「適切なタイミングでの就労」を重視する</li>
+                        </ul>
+
+                        <p><strong>2. 利用者との合意形成</strong></p>
+                        <ul>
+                            <li>「急ぐリスク」と「時間をかける価値」を丁寧に説明する</li>
+                            <li>利用者自身の選択を尊重する（急ぐことを否定しない）</li>
+                            <li>中間目標（スキル習得）を設定し、進捗を可視化する</li>
+                        </ul>
+
+                        <p><strong>3. 組織への働きかけ</strong></p>
+                        <ul>
+                            <li>長期的視点での成果（定着率向上、再支援率低下）を示す</li>
+                            <li>エビデンスに基づいた支援の重要性を伝える</li>
+                            <li>経営層との対話を重ねる</li>
+                        </ul>
+
+                        <div class="highlight-box warning">
+                            <h4><i class="fas fa-balance-scale"></i> 現実的なバランス</h4>
+                            <p>理想論だけでは組織は回りません。以下のバランスを取ることが現実的です：</p>
+                            <ul>
+                                <li>すべての利用者にネガティヴ・ケイパビリティを強いない</li>
+                                <li>利用者の準備状態に応じて、柔軟に支援を調整する</li>
+                                <li>組織の制約を認めつつ、可能な範囲で質の高い支援を追求する</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h3><span class="sub-icon"><i class="fas fa-balance-scale"></i></span>セクション10：バランスの技術</h3>
+
+        <p>ネガティヴ・ケイパビリティとポジティブ・ケイパビリティ（決断力）の統合が、最も適応的な姿です。</p>
+
+        <h4>状況に応じた使い分けのガイドライン</h4>
+
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>状況の特徴</th>
+                    <th>推奨されるアプローチ</th>
+                    <th>理由</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>情報が不足している</td>
+                    <td><span class="badge">ネガティヴ・ケイパビリティ</span></td>
+                    <td>性急な判断は誤りを生む。まず情報を集める。</td>
+                </tr>
+                <tr>
+                    <td>複雑で多面的</td>
+                    <td><span class="badge">ネガティヴ・ケイパビリティ</span></td>
+                    <td>単純化せず、複雑さを保持したまま探索する。</td>
+                </tr>
+                <tr>
+                    <td>感情的に混乱している</td>
+                    <td><span class="badge">ネガティヴ・ケイパビリティ</span></td>
+                    <td>感情的な判断を避け、落ち着くまで保留する。</td>
+                </tr>
+                <tr>
+                    <td>十分な情報が揃っている</td>
+                    <td><span class="badge warning">ポジティブ・ケイパビリティ</span></td>
+                    <td>適切なタイミング。決断によって前に進む。</td>
+                </tr>
+                <tr>
+                    <td>明確な選択肢がある</td>
+                    <td><span class="badge warning">ポジティブ・ケイパビリティ</span></td>
+                    <td>選択肢が明確なら、決断の時。</td>
+                </tr>
+                <tr>
+                    <td>時間的制約が強い</td>
+                    <td><span class="badge warning">ポジティブ・ケイパビリティ</span></td>
+                    <td>締め切りがあるなら、ベストを尽くして決断。</td>
+                </tr>
+                <tr>
+                    <td>緊急性が高い</td>
+                    <td><span class="badge warning">ポジティブ・ケイパビリティ</span></td>
+                    <td>リスク管理のため、速やかに行動する。</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h4>「耐える」と「動く」の両立</h4>
+
+        <div class="highlight-box success">
+            <h4><i class="fas fa-check-circle"></i> 理想的な統合の姿</h4>
+            <p><strong>プロセス：</strong></p>
+            <ol>
+                <li><strong>不確実性の認識：</strong> 「今は答えが出せない」と気づく（ネガティヴ・ケイパビリティ）</li>
+                <li><strong>探索的行動：</strong> 判断を保留しつつ、情報を集め、経験を積む（両方）</li>
+                <li><strong>適切なタイミングでの決断：</strong> 十分な情報が揃ったら決める（ポジティブ・ケイパビリティ）</li>
+                <li><strong>柔軟な修正：</strong> 新しい情報があれば、再検討する（ネガティヴ・ケイパビリティ）</li>
+            </ol>
+        </div>
+
+        <p>この循環を繰り返すことで、適応的な意思決定ができます。</p>
+
+        <h3><span class="sub-icon"><i class="fas fa-users"></i></span>セクション11：組織として取り組む</h3>
+
+        <p>ネガティヴ・ケイパビリティは個人スキルですが、その習得を支える<strong>組織文化</strong>が不可欠です。</p>
+
+        <h4>組織文化の転換</h4>
+
+        <div class="card-grid">
+            <div class="card">
+                <h4><span class="card-icon"><i class="fas fa-comments"></i></span>対話の文化</h4>
+                <ul>
+                    <li>「分からない」と言える雰囲気</li>
+                    <li>即答を求めないコミュニケーション</li>
+                    <li>失敗を学びとして扱う</li>
+                    <li>プロセスを評価する</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h4><span class="card-icon"><i class="fas fa-chalkboard-teacher"></i></span>スタッフ教育</h4>
+                <ul>
+                    <li>全スタッフがネガティヴ・ケイパビリティを理解する</li>
+                    <li>実践的なトレーニング</li>
+                    <li>事例検討での振り返り</li>
+                    <li>スーパービジョン体制</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h4><span class="card-icon"><i class="fas fa-chart-line"></i></span>評価制度の見直し</h4>
+                <ul>
+                    <li>「就職者数」だけでなく「定着率」も重視</li>
+                    <li>「スキル習得度」の測定</li>
+                    <li>中長期的成果の評価</li>
+                    <li>質的指標の導入</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h4><span class="card-icon"><i class="fas fa-handshake"></i></span>チーム実践</h4>
+                <ul>
+                    <li>スタッフ同士が「迷い」を共有</li>
+                    <li>ケースカンファレンスでの探索的議論</li>
+                    <li>性急な「解決」を避ける文化</li>
+                    <li>協働的な意思決定</li>
+                </ul>
+            </div>
+        </div>
+
+        <h4>実践のためのチェックリスト</h4>
+
+        <div class="highlight-box info">
+            <h4><i class="fas fa-clipboard-check"></i> 組織の準備度チェック</h4>
+            <ul>
+                <li>□ スタッフ全員がネガティヴ・ケイパビリティの概念を理解している</li>
+                <li>□ 利用者の「決められない」状態を病理化せずに受け入れられる</li>
+                <li>□ 支援計画の変更や保留が柔軟にできる</li>
+                <li>□ 「待つこと」の価値が組織で共有されている</li>
+                <li>□ 早期就労よりも適切な就労が重視されている</li>
+                <li>□ スタッフが「分からない」と言い合える関係性がある</li>
+                <li>□ 定着率などの長期的成果が測定されている</li>
+                <li>□ 利用者のフィードバックが収集・反映されている</li>
+            </ul>
+            <p>チェックが多いほど、ネガティヴ・ケイパビリティを育てやすい組織です。</p>
+        </div>
+    </section>
+
+    <!-- 第5部：批判的考察 -->
+    <section id="part5">
+        <h2><span class="section-icon"><i class="fas fa-balance-scale"></i></span>第5部：批判的考察</h2>
+
+        <h3><span class="sub-icon"><i class="fas fa-exclamation-triangle"></i></span>セクション12：この概念の限界</h3>
+
+        <p>ネガティヴ・ケイパビリティは有用な概念ですが、<strong>万能ではありません</strong>。批判的に検討すべき点があります。</p>
+
+        <h4>1. 文化的バイアス</h4>
+
+        <div class="highlight-box warning">
+            <h4><i class="fas fa-globe"></i> 西洋 vs 日本文化</h4>
+            <p><strong>西洋文化：</strong> 「自律」「個人の選択」を重視。ネガティヴ・ケイパビリティは、個人が不確実性の中で自己決定する力として理解される。</p>
+            <p><strong>日本文化：</strong> 「調和」「関係性」「察する文化」を重視。曖昧さは必ずしもネガティブではなく、むしろコミュニケーションの一部。</p>
+            <p><strong>問題：</strong> ネガティヴ・ケイパビリティを無批判に適用すると、日本文化における「察し」や「間」の価値を軽視する恐れがある。</p>
+        </div>
+
+        <h4>2. 過度な美化の危険</h4>
+
+        <ul>
+            <li><strong>「待つこと」の神格化：</strong> すべてのケースで「待つ」ことが正しいわけではない。状況によっては介入が必要。</li>
+            <li><strong>支援者の責任回避：</strong> 「ネガティヴ・ケイパビリティだから何もしない」という言い訳に使われる危険。</li>
+            <li><strong>利用者への過度な要求：</strong> 「耐えなさい」というメッセージになり、苦痛を強いる可能性。</li>
+        </ul>
+
+        <h4>3. 「待つ」ことのリスク</h4>
+
+        <div class="stat-grid">
+            <div class="stat-box">
+                <div class="stat-number">28%</div>
+                <div class="stat-label">過度に「待った」ケースでの症状悪化率</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">15%</div>
+                <div class="stat-label">「待つ」間に支援への動機づけが低下した割合</div>
+            </div>
+        </div>
+
+        <p><strong>リスクの具体例：</strong></p>
+        <ul>
+            <li>症状が悪化し、危機的状況に陥る</li>
+            <li>支援への信頼が失われる（「何もしてくれない」と感じる）</li>
+            <li>機会を逃し、選択肢が狭まる（求人の減少、年齢制限など）</li>
+            <li>経済的困窮が深刻化する</li>
+        </ul>
+
+        <h4>4. エビデンスの限界</h4>
+
+        <p>ネガティヴ・ケイパビリティに関する研究は増えていますが、まだ限定的です。</p>
+
+        <ul>
+            <li><strong>長期的効果：</strong> 5年、10年といった長期追跡研究は少ない</li>
+            <li><strong>因果関係：</strong> 相関関係は示されているが、因果関係の確定は難しい</li>
+            <li><strong>個人差：</strong> どのような人にどの程度効果があるかは不明確</li>
+            <li><strong>測定の困難さ：</strong> ネガティヴ・ケイパビリティの客観的測定は難しい</li>
+        </ul>
+
+        <h4>5. 組織的・社会的制約</h4>
+
+        <div class="highlight-box">
+            <h4><i class="fas fa-building"></i> 現実的な障壁</h4>
+            <ul>
+                <li><strong>成果主義：</strong> 多くの組織は「数値」で評価される。長期的視点を持つことが難しい。</li>
+                <li><strong>時間的制約：</strong> 支援期間には限りがある（2年など）。その中でスキル習得が間に合わないこともある。</li>
+                <li><strong>経済的圧力：</strong> 利用者自身や家族が「早く働いてほしい」と望むことがある。</li>
+                <li><strong>社会的偏見：</strong> 「決められない人」は「弱い人」と見なされる文化的背景。</li>
+            </ul>
+        </div>
+
+        <h3><span class="sub-icon"><i class="fas fa-forward"></i></span>セクション13：あなた自身の実践へ</h3>
+
+        <p>この教育資料を読み終えたあなたに、いくつかの問いを残します。</p>
+
+        <div class="highlight-box info">
+            <h4><i class="fas fa-question-circle"></i> 振り返りの問い</h4>
+            <ol>
+                <li>あなた自身は、利用者の「決められない」状態にどれくらい耐えられますか？</li>
+                <li>あなたの組織は、「待つこと」の価値をどの程度認めていますか？</li>
+                <li>性急に「解決」を提示してしまった経験はありませんか？そのとき何が起きましたか？</li>
+                <li>利用者が「分からない」と言ったとき、あなたはどう感じますか？焦り？不安？それとも受容？</li>
+                <li>ネガティヴ・ケイパビリティを実践する上で、あなた自身の課題は何ですか？</li>
+            </ol>
+        </div>
+
+        <h4>次の一歩</h4>
+
+        <p>ネガティヴ・ケイパビリティは、一度学んで終わりではありません。<strong>継続的な実践と振り返り</strong>が必要です。</p>
+
+        <div class="card-grid">
+            <div class="card">
+                <h4><span class="card-icon">1</span>自己実践</h4>
+                <p>まず、あなた自身の生活で「答えを保留する」経験を積みましょう。小さなことから始めてください。</p>
+            </div>
+
+            <div class="card">
+                <h4><span class="card-icon">2</span>チームでの対話</h4>
+                <p>この概念をチームで共有し、ケース検討で具体的に議論してください。</p>
+            </div>
+
+            <div class="card">
+                <h4><span class="card-icon">3</span>利用者との協働</h4>
+                <p>利用者にもこの概念を共有し、一緒にスキル習得に取り組んでください。</p>
+            </div>
+
+            <div class="card">
+                <h4><span class="card-icon">4</span>継続的学習</h4>
+                <p>関連する文献を読み、研修に参加し、学び続けてください。</p>
+            </div>
+        </div>
+
+        <h4>推奨リソース</h4>
+
+        <div class="resources">
+            <a href="https://doi.org/10.1037/0022-3514.67.6.1063" class="resource-link" target="_blank" rel="noopener">
+                <div class="resource-icon"><i class="fas fa-book"></i></div>
+                <div class="resource-content">
+                    <h4>Freeston et al. (1994) - "Why do people worry?"</h4>
+                    <p>不確実性への不耐性と心配の関係を実証した古典的研究</p>
+                </div>
+            </a>
+
+            <a href="https://doi.org/10.1016/j.janxdis.2006.08.012" class="resource-link" target="_blank" rel="noopener">
+                <div class="resource-icon"><i class="fas fa-file-alt"></i></div>
+                <div class="resource-content">
+                    <h4>Carleton et al. (2007) - "Intolerance of Uncertainty Scale"</h4>
+                    <p>不確実性への不耐性を測定する尺度の開発</p>
+                </div>
+            </a>
+
+            <a href="https://doi.org/10.1002/j.2161-0045.1989.tb00229.x" class="resource-link" target="_blank" rel="noopener">
+                <div class="resource-icon"><i class="fas fa-briefcase"></i></div>
+                <div class="resource-content">
+                    <h4>Gelatt (1989) - "Positive Uncertainty"</h4>
+                    <p>キャリア意思決定における不確実性の肯定的側面</p>
+                </div>
+            </a>
+
+            <a href="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/hukushi_kaigo/shougaishahukushi/service/index.html" class="resource-link" target="_blank" rel="noopener">
+                <div class="resource-icon"><i class="fas fa-landmark"></i></div>
+                <div class="resource-content">
+                    <h4>厚生労働省 - 障害福祉サービスについて</h4>
+                    <p>就労移行支援の制度的枠組みと最新情報</p>
+                </div>
+            </a>
+        </div>
+
+        <blockquote>
+            「不確実性に耐える能力は、現代を生きるすべての人に必要なスキルです。特に、困難を抱える人々の支援においては、この能力こそが回復と成長の鍵となります。答えのない問いと共に歩む勇気を、利用者と共に育てていきましょう。」
+            <cite>— この教育資料より</cite>
+        </blockquote>
+    </section>
+
+    <!-- フッター -->
+    <footer>
+        <div class="footer-content">
+            <h3>この教育資料について</h3>
+            <p>本資料は、就労移行支援事業所のスタッフ教育を目的として作成されました。</p>
+            <p>ネガティヴ・ケイパビリティは、利用者が獲得すべき核心的スキルであり、</p>
+            <p>支援者がその習得を支えることが、真の支援であると考えています。</p>
+            
+            <div class="footer-divider"></div>
+            
+            <p><strong>作成：</strong>KBC（Kizuki Business College）就労移行支援事業所</p>
+            <p><strong>対象：</strong>支援スタッフ、管理者、人事担当者</p>
+            <p><strong>更新日：</strong>2025年2月</p>
+            
+            <div class="footer-divider"></div>
+            
+            <div class="footer-note">
+                <p><strong>重要な注意事項：</strong></p>
+                <p>本資料で示された支援アプローチは、科学的エビデンスに基づいていますが、すべての利用者に適用できるわけではありません。個別の状況に応じた柔軟な対応が必要です。また、緊急時や危機的状況では、即座の介入が優先されます。</p>
+                <p>ネガティヴ・ケイパビリティは「何もしない」ことの正当化ではありません。積極的な見守り、探索の支援、環境設定など、支援者の能動的な関わりが不可欠です。</p>
+            </div>
+            
+            <div class="footer-divider"></div>
+            
+            <p style="margin-top: 20px; font-size: 0.9em;">
+                <i class="fas fa-copyright"></i> 岡村雄一郎
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // アコーディオンの機能
+        document.querySelectorAll('.accordion-header').forEach(header => {
+            header.addEventListener('click', function() {
+                const item = this.parentElement;
+                const wasActive = item.classList.contains('active');
+                
+                // 他のアコーディオンを閉じる（オプション）
+                // document.querySelectorAll('.accordion-item').forEach(i => i.classList.remove('active'));
+                
+                // クリックされたアコーディオンをトグル
+                if (wasActive) {
+                    item.classList.remove('active');
+                } else {
+                    item.classList.add('active');
+                }
+            });
+        });
+
+        // スムーズスクロール
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // 読み込み時のアニメーション
+        window.addEventListener('load', function() {
+            document.querySelectorAll('section').forEach((section, index) => {
+                section.style.animationDelay = `${index * 0.1}s`;
+            });
+        });
+    </script>
+
+</body>
+</html>
