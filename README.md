@@ -1,0 +1,2 @@
+# Negative-capability-skill
+ネガティブケイパビリティ
